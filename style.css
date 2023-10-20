@@ -1,0 +1,184 @@
+:root {
+
+    --input-color: #333437;
+    --input-border: #CDD9ED;
+    --input-background: #fff;
+    --input-placeholder: #CBD1DC;
+
+    --input-border-focus: #275EFE;
+
+    --group-color: var(--input-color);
+    --group-border: var(--input-border);
+    --group-background: #EEF4FF;
+
+    --group-color-focus: #fff;
+    --group-border-focus: var(--input-border-focus);
+    --group-background-focus: #678EFE;
+
+}
+
+.title {
+    color: #b3ff03;
+    box-shadow: #678EFE;
+    text-align: center;
+    margin-bottom: 5% !important;
+    font-size: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+.form-field {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 6px;
+    -webkit-appearance: none;
+    color: var(--input-color);
+    border: 1px solid var(--input-border);
+    background: var(--input-background);
+    transition: border .3s ease;
+    &::placeholder {
+        color: var(--input-placeholder);
+    }
+    &:focus {
+        outline: none;
+        border-color: var(--input-border-focus);
+    }
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    width: 100%;
+    & > span,
+    .form-field {
+        white-space: nowrap;
+        display: block;
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+        &:first-child {
+            border-radius: 6px 0 0 6px;
+        }
+        &:last-child {
+            border-radius: 0 6px 6px 0;
+        }
+        &:not(:first-child) {
+            margin-left: -1px;
+        }
+    }
+ 
+    & > span {
+        user-select: none;
+        text-align: center;
+        padding: 8px 12px;
+        font-size: 14px;
+        line-height: 25px;
+        color: var(--group-color);
+        background: var(--group-background);
+        border: 1px solid var(--group-border);
+        transition: var(--group-background) .3s ease, border .3s ease, color .3s ease;
+    }
+    &:focus-within {
+        & > span {
+            color: var(--group-color-focus);
+            background: var(--group-background-focus);
+            border-color: var(--group-border-focus);
+        }
+    }
+}
+
+span:hover {
+    cursor: pointer;
+    opacity: .6;
+}
+
+img {
+    height: auto;
+}
+
+body {
+    
+    font-family: 'Mukta Malar', Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(90deg, #993cc8 50%, #473698 100%);  
+    .form-group {
+        max-width: 360px;
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.copy {
+    position: fixed;
+    top: 150px;
+    left: 90%;
+    font-size: 20px;
+    color: #fff;
+    background-color: #80ecb4;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: #5468ff;
+    display: none;
+}
+
+input {
+    text-align: center;
+}
+
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.imgTitle {
+    user-select: none;
+}
