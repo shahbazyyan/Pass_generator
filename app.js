@@ -14,7 +14,7 @@ function shuffleArray(array) {
   
 let arr = `12FGH34KLnoM890a*(zABCDE)_-bcdeQVWfmgRS+=lhp[]ijkuN56>/7vwx
 yIJOPXYZ!@",qrst.<?`
-let x = arr.split("").slice(20,40);
+let x = arr.split("").slice(19,31);
 
 btn.addEventListener("click", (e) => {
 shuffleArray(x);
